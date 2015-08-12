@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SSK-eb-T8r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Buttonband Spacing-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" userLabel="Buttonband Spacing" customClass="ButtonBandSpacerController" customModule="Knitter_s_Toolbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="# of sts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWc-bj-E9Y" customClass="SectionBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="215" width="604" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="# of buttons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oln-64-rNG" customClass="SectionBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="321" width="604" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g8j-zE-1R7">
+                                <rect key="frame" x="0.0" y="473" width="600" height="73"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="stitchesPerHoleChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="pZy-ad-CGw"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WnC-Wp-uZz" userLabel="Stitch stepper" customClass="KTStepper" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="251" width="600" height="76"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="sts per buttonhole" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxA-jO-8Iu" customClass="SectionBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="437" width="604" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gV4-yc-BJe" userLabel="Button stepper" customClass="KTStepper" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="357" width="600" height="87"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="buttonhole spacing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edj-fa-zYJ" userLabel="Buttonhole calculator title" customClass="CalculatorTitleBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="0.0" width="604" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" misplaced="YES" text="Instruction text label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD" customClass="OutputBox" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="48" width="604" height="171"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="gV4-yc-BJe" secondAttribute="centerX" id="0zx-bb-Eby"/>
+                            <constraint firstItem="eWc-bj-E9Y" firstAttribute="width" secondItem="oln-64-rNG" secondAttribute="width" id="4a0-Tq-Qfy"/>
+                            <constraint firstItem="Edj-fa-zYJ" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="4kN-WU-Gmz"/>
+                            <constraint firstItem="gV4-yc-BJe" firstAttribute="centerX" secondItem="WnC-Wp-uZz" secondAttribute="centerX" id="7kK-vO-K3W"/>
+                            <constraint firstItem="gV4-yc-BJe" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.145" id="8Cd-Pf-NbA" userLabel="Equal Heights - Stepper - View"/>
+                            <constraint firstItem="Edj-fa-zYJ" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.08" id="922-a7-COO"/>
+                            <constraint firstItem="xxA-jO-8Iu" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.065" id="C97-wa-IPM"/>
+                            <constraint firstItem="gV4-yc-BJe" firstAttribute="top" secondItem="oln-64-rNG" secondAttribute="bottom" id="EvR-jq-oPl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g8j-zE-1R7" secondAttribute="trailing" constant="-16" id="GY3-Vr-hHz"/>
+                            <constraint firstItem="WnC-Wp-uZz" firstAttribute="top" secondItem="eWc-bj-E9Y" secondAttribute="bottom" id="HOT-f7-Myx"/>
+                            <constraint firstItem="gV4-yc-BJe" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Io6-Qb-v9d"/>
+                            <constraint firstItem="xxA-jO-8Iu" firstAttribute="width" secondItem="oln-64-rNG" secondAttribute="width" id="JxT-Kz-y5Q"/>
+                            <constraint firstItem="eWc-bj-E9Y" firstAttribute="centerX" secondItem="oln-64-rNG" secondAttribute="centerX" id="Pcr-ka-wIf"/>
+                            <constraint firstItem="eWc-bj-E9Y" firstAttribute="height" secondItem="oln-64-rNG" secondAttribute="height" id="QYf-aU-Wvj"/>
+                            <constraint firstItem="g8j-zE-1R7" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.12" id="RYi-OE-4DD"/>
+                            <constraint firstItem="Edj-fa-zYJ" firstAttribute="width" secondItem="KQZ-1w-vlD" secondAttribute="width" id="RdP-gz-SwX"/>
+                            <constraint firstItem="gV4-yc-BJe" firstAttribute="width" secondItem="WnC-Wp-uZz" secondAttribute="width" id="VMu-KN-CCi"/>
+                            <constraint firstItem="oln-64-rNG" firstAttribute="top" secondItem="WnC-Wp-uZz" secondAttribute="bottom" id="X0g-sV-LBj"/>
+                            <constraint firstItem="xxA-jO-8Iu" firstAttribute="bottom" secondItem="g8j-zE-1R7" secondAttribute="top" id="ZxY-AY-jqd"/>
+                            <constraint firstItem="xxA-jO-8Iu" firstAttribute="height" secondItem="oln-64-rNG" secondAttribute="height" id="agB-VI-qoK"/>
+                            <constraint firstItem="Edj-fa-zYJ" firstAttribute="centerX" secondItem="eWc-bj-E9Y" secondAttribute="centerX" id="b0L-56-QKt"/>
+                            <constraint firstItem="WnC-Wp-uZz" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.1275" id="e0q-bV-9uc"/>
+                            <constraint firstAttribute="centerX" secondItem="xxA-jO-8Iu" secondAttribute="centerX" id="ei9-uQ-kKL"/>
+                            <constraint firstItem="eWc-bj-E9Y" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" id="fwz-fq-cHw"/>
+                            <constraint firstItem="xxA-jO-8Iu" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" constant="4" id="lqL-Dr-jMW"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="g8j-zE-1R7" secondAttribute="bottom" id="mxw-qZ-lJ1"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Edj-fa-zYJ" secondAttribute="bottom" id="oYi-5Q-G0r"/>
+                            <constraint firstItem="xxA-jO-8Iu" firstAttribute="centerX" secondItem="oln-64-rNG" secondAttribute="centerX" id="ofo-1b-dvD"/>
+                            <constraint firstItem="gV4-yc-BJe" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="uVz-hs-FNM"/>
+                            <constraint firstItem="g8j-zE-1R7" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="w1J-pu-JBc"/>
+                            <constraint firstItem="Edj-fa-zYJ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="wMI-YY-0vS"/>
+                            <constraint firstItem="Edj-fa-zYJ" firstAttribute="width" secondItem="eWc-bj-E9Y" secondAttribute="width" id="zdl-Yr-c8H"/>
+                            <constraint firstItem="xxA-jO-8Iu" firstAttribute="top" secondItem="gV4-yc-BJe" secondAttribute="bottom" id="zqS-Tf-2Hs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buttonband spacing" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="instructionTextLabel" destination="KQZ-1w-vlD" id="s2k-L6-VaF"/>
+                        <outlet property="numButtonsStepper" destination="gV4-yc-BJe" id="w3u-Sb-iXU"/>
+                        <outlet property="numStitchesStepper" destination="WnC-Wp-uZz" id="qbk-zi-Pwv"/>
+                        <outlet property="stitchesPerHoleControl" destination="g8j-zE-1R7" id="a9j-38-DaJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="-291"/>
+        </scene>
+        <!--Gauge Calculator-->
+        <scene sceneID="ZYX-Nm-wSM">
+            <objects>
+                <viewController id="y10-Li-5DL" customClass="StitchCalculatorController" customModule="Knitter_s_Toolbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zAs-FZ-7pu"/>
+                        <viewControllerLayoutGuide type="bottom" id="HpD-iz-laj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Doq-Z3-d3L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="b9J-NF-5pI">
+                                <rect key="frame" x="0.0" y="48" width="600" height="503"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="y10-Li-5DL" id="G9P-2D-6Vd"/>
+                                    <outlet property="delegate" destination="y10-Li-5DL" id="mO8-fm-LQg"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gauge calculator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOA-T9-rt0" customClass="CalculatorTitleBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="0.0" width="604" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HpD-iz-laj" firstAttribute="top" secondItem="b9J-NF-5pI" secondAttribute="bottom" id="0G6-L0-AT0"/>
+                            <constraint firstItem="b9J-NF-5pI" firstAttribute="leading" secondItem="Doq-Z3-d3L" secondAttribute="leadingMargin" constant="-16" id="0m5-vn-o5Q"/>
+                            <constraint firstAttribute="width" secondItem="vOA-T9-rt0" secondAttribute="width" constant="-4" id="ITZ-UN-bE3"/>
+                            <constraint firstAttribute="centerX" secondItem="vOA-T9-rt0" secondAttribute="centerX" id="aCT-nV-Fxm"/>
+                            <constraint firstItem="vOA-T9-rt0" firstAttribute="height" secondItem="Doq-Z3-d3L" secondAttribute="height" multiplier="0.08" id="bHV-Jg-yZM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b9J-NF-5pI" secondAttribute="trailing" constant="-16" id="qWl-8d-Pui"/>
+                            <constraint firstItem="vOA-T9-rt0" firstAttribute="top" secondItem="zAs-FZ-7pu" secondAttribute="bottom" id="vqQ-GV-t0q"/>
+                            <constraint firstItem="b9J-NF-5pI" firstAttribute="top" secondItem="vOA-T9-rt0" secondAttribute="bottom" id="x5A-sE-BxD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gauge Calculator" id="Cdu-tZ-fH7"/>
+                    <connections>
+                        <outlet property="stitch_calculator_table" destination="b9J-NF-5pI" id="9cJ-Gg-7dK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSI-TX-SzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1119"/>
+        </scene>
+        <!--Shaping calculator-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="ShapingCalculatorViewController" customModule="Knitter_s_Toolbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="end with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P40-ev-hPd" customClass="HintLabel" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="16" y="297" width="213" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-jJ-4Ox" customClass="HintLabel" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="16" y="249" width="213" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total rows" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28c-iy-8hF" customClass="HintLabel" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="16" y="345" width="213" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="increases / decreases per row" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXf-1p-LZM" customClass="SectionBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="441" width="604" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shaping calculator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-Np-41T" userLabel="Shaping Calculator title" customClass="CalculatorTitleBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="0.0" width="604" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="InstructionTextLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMU-hd-J9h" customClass="OutputBox" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="48" width="604" height="163"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-da-uC4" userLabel="Row Stepper" customClass="KTStepper" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="229" y="345" width="373" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stitches &amp; rows" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdB-qL-1AT" customClass="SectionBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-3" y="211" width="604" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGu-4p-QGB" userLabel="End-stitch stepper" customClass="KTStepper" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="229" y="293" width="373" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dpt-IJ-L40" userLabel="Start-stitch stepper" customClass="KTStepper" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="229" y="249" width="373" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RS5-Zo-Mzq">
+                                <rect key="frame" x="-2" y="479" width="604" height="73"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                </segments>
+                                <connections>
+                                    <action selector="stitchesPerRowChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="08R-Su-O4A"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-tp-gAL" userLabel="End-row button" customClass="HandwrittenButton" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="393" width="604" height="48"/>
+                                <state key="normal" title="I don't do anything yet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="8rJ-Kc-sve" eventType="touchUpInside" id="tfu-mC-Kkj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XMU-hd-J9h" firstAttribute="centerX" secondItem="pCj-Np-41T" secondAttribute="centerX" id="5XE-eg-8th"/>
+                            <constraint firstItem="YXf-1p-LZM" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.063" id="6mI-66-onB"/>
+                            <constraint firstItem="EGu-4p-QGB" firstAttribute="leading" secondItem="P40-ev-hPd" secondAttribute="trailing" id="7TM-Pi-cgV"/>
+                            <constraint firstItem="RS5-Zo-Mzq" firstAttribute="centerX" secondItem="pCj-Np-41T" secondAttribute="centerX" id="8TA-Kc-KCG"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="height" secondItem="iXu-da-uC4" secondAttribute="height" id="8xi-43-tAN"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="height" secondItem="hBX-tp-gAL" secondAttribute="height" id="978-Xw-CRB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dpt-IJ-L40" secondAttribute="trailing" constant="-18" id="9Pe-yA-P86"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="height" secondItem="P40-ev-hPd" secondAttribute="height" id="AWP-96-BZa"/>
+                            <constraint firstItem="YXf-1p-LZM" firstAttribute="width" secondItem="pCj-Np-41T" secondAttribute="width" id="AtX-LU-D6b"/>
+                            <constraint firstItem="O8F-jJ-4Ox" firstAttribute="height" secondItem="P40-ev-hPd" secondAttribute="height" id="BLo-z9-Rl6"/>
+                            <constraint firstItem="RS5-Zo-Mzq" firstAttribute="width" secondItem="pCj-Np-41T" secondAttribute="width" id="CRs-tm-JJb"/>
+                            <constraint firstItem="ZdB-qL-1AT" firstAttribute="top" secondItem="XMU-hd-J9h" secondAttribute="bottom" id="CVF-md-l1L"/>
+                            <constraint firstItem="XMU-hd-J9h" firstAttribute="top" secondItem="pCj-Np-41T" secondAttribute="bottom" id="Cnn-Fc-M2G"/>
+                            <constraint firstItem="YXf-1p-LZM" firstAttribute="centerX" secondItem="pCj-Np-41T" secondAttribute="centerX" constant="2" id="Dwq-8n-3rd"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="width" secondItem="P40-ev-hPd" secondAttribute="width" id="FF6-pO-bWx"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="top" secondItem="P40-ev-hPd" secondAttribute="bottom" id="FXY-Cd-DPx"/>
+                            <constraint firstItem="O8F-jJ-4Ox" firstAttribute="height" secondItem="Dpt-IJ-L40" secondAttribute="height" id="HWC-aQ-ISN"/>
+                            <constraint firstItem="iXu-da-uC4" firstAttribute="leading" secondItem="28c-iy-8hF" secondAttribute="trailing" id="J7L-3A-ZB6"/>
+                            <constraint firstItem="RS5-Zo-Mzq" firstAttribute="top" secondItem="YXf-1p-LZM" secondAttribute="bottom" id="Jv5-Z7-TN3"/>
+                            <constraint firstItem="RS5-Zo-Mzq" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.12" id="L4R-JP-nt8"/>
+                            <constraint firstItem="pCj-Np-41T" firstAttribute="width" secondItem="hBX-tp-gAL" secondAttribute="width" id="OKx-BV-FnT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iXu-da-uC4" secondAttribute="trailing" constant="-18" id="Oa4-6x-fbQ"/>
+                            <constraint firstItem="O8F-jJ-4Ox" firstAttribute="centerY" secondItem="Dpt-IJ-L40" secondAttribute="centerY" id="RVf-Rz-0CW"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="centerX" secondItem="P40-ev-hPd" secondAttribute="centerX" id="SPP-ar-zUy"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="RS5-Zo-Mzq" secondAttribute="bottom" id="TJy-gR-fUG"/>
+                            <constraint firstItem="Dpt-IJ-L40" firstAttribute="leading" secondItem="O8F-jJ-4Ox" secondAttribute="trailing" id="UPF-8b-AFL"/>
+                            <constraint firstItem="ZdB-qL-1AT" firstAttribute="height" secondItem="YXf-1p-LZM" secondAttribute="height" id="Wqu-Eh-fxb"/>
+                            <constraint firstItem="XMU-hd-J9h" firstAttribute="width" secondItem="pCj-Np-41T" secondAttribute="width" id="YRh-Db-8JM"/>
+                            <constraint firstItem="pCj-Np-41T" firstAttribute="centerX" secondItem="hBX-tp-gAL" secondAttribute="centerX" id="YbX-ay-uRY"/>
+                            <constraint firstItem="hBX-tp-gAL" firstAttribute="top" secondItem="28c-iy-8hF" secondAttribute="bottom" id="e5p-UK-1hU"/>
+                            <constraint firstItem="hBX-tp-gAL" firstAttribute="top" secondItem="iXu-da-uC4" secondAttribute="bottom" id="fvS-ms-Cbc"/>
+                            <constraint firstItem="P40-ev-hPd" firstAttribute="top" secondItem="O8F-jJ-4Ox" secondAttribute="bottom" id="fvr-8A-czH"/>
+                            <constraint firstItem="O8F-jJ-4Ox" firstAttribute="centerX" secondItem="P40-ev-hPd" secondAttribute="centerX" id="iR0-zj-0vN"/>
+                            <constraint firstItem="EGu-4p-QGB" firstAttribute="height" secondItem="P40-ev-hPd" secondAttribute="height" id="inb-ML-x94"/>
+                            <constraint firstAttribute="width" secondItem="pCj-Np-41T" secondAttribute="width" constant="-4" id="jWI-eD-9tB"/>
+                            <constraint firstItem="pCj-Np-41T" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="joI-1j-X2j"/>
+                            <constraint firstItem="hBX-tp-gAL" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.08" id="nRP-kJ-p6D"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.355" id="nsR-Ky-P7x"/>
+                            <constraint firstItem="O8F-jJ-4Ox" firstAttribute="top" secondItem="ZdB-qL-1AT" secondAttribute="bottom" id="oYO-Bd-CIT"/>
+                            <constraint firstItem="ZdB-qL-1AT" firstAttribute="centerX" secondItem="YXf-1p-LZM" secondAttribute="centerX" constant="-3" id="rRO-Di-GwO"/>
+                            <constraint firstAttribute="centerX" secondItem="pCj-Np-41T" secondAttribute="centerX" id="rrb-Ws-vVV"/>
+                            <constraint firstItem="pCj-Np-41T" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.08" id="ryo-55-6Zj"/>
+                            <constraint firstItem="ZdB-qL-1AT" firstAttribute="width" secondItem="YXf-1p-LZM" secondAttribute="width" id="tNu-z1-Umb"/>
+                            <constraint firstItem="28c-iy-8hF" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="tkG-0k-w4q"/>
+                            <constraint firstItem="O8F-jJ-4Ox" firstAttribute="width" secondItem="P40-ev-hPd" secondAttribute="width" id="ugZ-JQ-fFf"/>
+                            <constraint firstItem="YXf-1p-LZM" firstAttribute="top" secondItem="hBX-tp-gAL" secondAttribute="bottom" id="vRd-3k-nO6"/>
+                            <constraint firstItem="EGu-4p-QGB" firstAttribute="centerY" secondItem="P40-ev-hPd" secondAttribute="centerY" constant="-4" id="xHO-Gs-rUx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EGu-4p-QGB" secondAttribute="trailing" constant="-18" id="zwu-dO-L6T"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shaping calculator" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="endingStitchesStepper" destination="EGu-4p-QGB" id="Adu-NA-q8P"/>
+                        <outlet property="increaseDecreaseBar" destination="YXf-1p-LZM" id="tYA-02-sEb"/>
+                        <outlet property="instructionTextLabel" destination="XMU-hd-J9h" id="ijK-1g-YIc"/>
+                        <outlet property="shapingStartButton" destination="hBX-tp-gAL" id="FLh-fo-a9f"/>
+                        <outlet property="startingStitchesStepper" destination="Dpt-IJ-L40" id="FCf-ag-A9b"/>
+                        <outlet property="stitchesPerRowController" destination="RS5-Zo-Mzq" id="lTO-D6-2hn"/>
+                        <outlet property="totalRowsStepper" destination="iXu-da-uC4" id="w54-J2-Uog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="364"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ak9-Y5-Zf2">
+            <objects>
+                <viewController id="SSK-eb-T8r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1l0-Gb-peA"/>
+                        <viewControllerLayoutGuide type="bottom" id="P2c-dD-aur"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RXI-ev-Db0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELy-le-Psd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="embed" id="hNh-2W-JHr"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="K" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmy-HF-EHN" customClass="AppTitleBar" customModule="Knitter_s_Toolbox" customModuleProvider="target">
+                                <rect key="frame" x="16" y="0.0" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pmy-HF-EHN" firstAttribute="leading" secondItem="RXI-ev-Db0" secondAttribute="leadingMargin" id="Aim-eh-R7r"/>
+                            <constraint firstItem="ELy-le-Psd" firstAttribute="leading" secondItem="RXI-ev-Db0" secondAttribute="leadingMargin" constant="-16" id="G3R-a9-b15"/>
+                            <constraint firstItem="ELy-le-Psd" firstAttribute="top" secondItem="RXI-ev-Db0" secondAttribute="topMargin" id="io7-NW-Wcs"/>
+                            <constraint firstItem="pmy-HF-EHN" firstAttribute="top" secondItem="RXI-ev-Db0" secondAttribute="topMargin" constant="-10" id="lHe-QT-Eje"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ELy-le-Psd" secondAttribute="trailing" constant="-16" id="yC5-5S-7VY"/>
+                            <constraint firstItem="P2c-dD-aur" firstAttribute="top" secondItem="ELy-le-Psd" secondAttribute="bottom" id="yYK-QZ-6pX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cae-bk-nsh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDZ-g7-MuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="4"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" customClass="KTTabBarController" customModule="Knitter_s_Toolbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="y10-Li-5DL" kind="relationship" relationship="viewControllers" id="sVf-rM-4pc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Ozp-Qq-HEb"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>

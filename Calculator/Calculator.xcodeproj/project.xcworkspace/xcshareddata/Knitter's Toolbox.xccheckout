@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>35FDA824-7A5B-4CA4-B27D-93713F75B479</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Knitter's Toolbox</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7B791FED9ADB1F0F2C51B34EE38604616BED83DD</key>
+		<string>github.com:jonathanherzog/ahd_apps.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Knitter's Toolbox/Knitter's Toolbox.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7B791FED9ADB1F0F2C51B34EE38604616BED83DD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jonathanherzog/ahd_apps.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7B791FED9ADB1F0F2C51B34EE38604616BED83DD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7B791FED9ADB1F0F2C51B34EE38604616BED83DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ahd_apps</string>
+		</dict>
+	</array>
+</dict>
+</plist>
